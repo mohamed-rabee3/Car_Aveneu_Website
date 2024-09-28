@@ -3,9 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Car_Avenue_Website": {
+    "CarAvenue": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/car-avenue-website",
+            "outputPath": "dist/car-avenue",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -22,14 +32,21 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "**/*",   
+                  "input": "src/assets",   
+                  "output": "/assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -64,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Car_Avenue_Website:build:production"
+              "buildTarget": "CarAvenue:build:production"
             },
             "development": {
-              "buildTarget": "Car_Avenue_Website:build:development"
+              "buildTarget": "CarAvenue:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,17 +102,27 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "**/*",   
+                  "input": "src/assets",   
+                  "output": "/assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ec75aef0-e2fc-4eed-821f-86368b7d50f0"
   }
 }

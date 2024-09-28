@@ -1,1 +1,45 @@
-<p>footer works!</p>
+<footer class="bg-black">
+    <div class="container">
+        <div class="row border-bottom border-secondary ">
+            <div class="col-lg-4 col-md-6 col-12 text-light my-3">
+                <h3>Who are we ?</h3>
+                <p>Car Avenue is your trusted partner for finding 
+                    the perfect new or pre-owned vehicle. With years of experience, we offer a diverse selection of cars at competitive prices, paired with exceptional customer service. Our mission is to make your car-buying experience smooth and enjoyable from start to finish.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 text-light my-3">
+                <h3 class="">Site map </h3>
+                  <ul class="">
+                    <li><a href="" class="text-light fs-5">Home</a></li>
+                    <li><a href="" class="text-light fs-5">Products</a></li>
+                    <li><a href="" class="text-light fs-5">About Us</a></li>
+                    <li><a href="" class="text-light fs-5">Contact Us</a></li>
+                  </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 col-12 my-3">
+                <h3 class="text-light">Newsletter</h3>
+                <form action="" [formGroup]="emailForm">
+                    <input type="email" placeholder="Enter a valid email address" class="rounded-4 px-3 py-2 my-2" style="width: 300px;" formControlName="email" required>
+                <button class="fw-bold btn btn-warning border-0 rounded-4 px-4 py-2 ms-2 my-2" (click)="onSubmit()">Subscribe</button>
+                </form>  
+                
+                <div class="row text-light my-2">
+                    <div class="col-1 ms-3"><i class="fa-brands fa-facebook fa-xl"></i></div>
+                    <div class="col-1"><i class="fa-brands fa-twitter fa-xl"></i></div>
+                    <div class="col-1"><i class="fa-brands fa-instagram fa-xl"></i></div>
+                    <div class="col-1"><i class="fa-brands fa-youtube fa-xl"></i></div>
+                    <div class="col-1"><i class="fa-brands fa-pinterest fa-xl"></i></div>
+                </div>
+                <p class="text-light fs-5 ms-3">Mobile : +2011119923009 </p>
+                <p class="text-light fs-5 ms-3">Email : info&#64;CarAvenu.com</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <img src="/assets/5a75686e-0624-4ed6-91eb-048b565dc466-removebg-preview.png" alt="CarAvenu" style="width: 70px;">
+            </div>
+            <div class="col-4 mt-3">
+                <p class="text-light">© ​2024 CarAvenu, Inc. All rights reserved&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</footer>
