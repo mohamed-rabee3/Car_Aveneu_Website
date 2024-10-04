@@ -6,21 +6,23 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
-  ],
+    FooterComponent,
+    HeaderComponent
+  ] ,
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule 
-
-  ],
+    ReactiveFormsModule,
+   
+],
   providers: [
     provideClientHydration()
   ],
