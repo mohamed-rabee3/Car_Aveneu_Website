@@ -1,25 +1,31 @@
+/* Navbar background color */
 nav{
     background-color: black !important;
 }
 
+/* gitting the list of pages faraway from the logo */
 .navbar-collapse{
     padding-left: 65% !important;
 }
 
+/* putting spaces bettwen list of pages */
 .navbar-nav a{
     color: white !important;
     padding-left: 9% !important;
 }
 
+/* puting spaces bettwen the profile section and the cart shop */
 .dropdown{
     padding-left: 10px !important;
     
 }
 
+/* making the lits text color in black */
 .dropdown-menu a{
     color: black !important;
 }
 
+/* Sizing the image is important coze it was to big */
 img{
     width: 50px !important;
 }
