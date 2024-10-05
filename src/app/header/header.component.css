@@ -1,6 +1,25 @@
 nav{
-    background-color: black ;
+    background-color: black !important;
 }
+
+.navbar-collapse{
+    padding-left: 65% !important;
+}
+
+.navbar-nav a{
+    color: white !important;
+    padding-left: 9% !important;
+}
+
+.dropdown{
+    padding-left: 10px !important;
+    
+}
+
+.dropdown-menu a{
+    color: black !important;
+}
+
 img{
     width: 50px !important;
 }
