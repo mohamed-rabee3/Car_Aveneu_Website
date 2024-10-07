@@ -3,19 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CarAvenue": {
+    "CAR_AVENEU_WEBSITE": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,35 +13,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/car-avenue",
+            "outputPath": "dist/car-aveneu-website",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
-                "glob": "**/*",   
-                  "input": "src/assets",   
-                  "output": "/assets"
+                "glob": "**/*",
+                "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/ngx-toastr/toastr.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
-            ],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "styles": ["src/styles.css"],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -81,10 +55,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CarAvenue:build:production"
+              "buildTarget": "CAR_AVENEU_WEBSITE:build:production"
             },
             "development": {
-              "buildTarget": "CarAvenue:build:development"
+              "buildTarget": "CAR_AVENEU_WEBSITE:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,34 +69,19 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-                "glob": "**/*",   
-                  "input": "src/assets",   
-                  "output": "/assets"
+                "glob": "**/*",
+                "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/ngx-toastr/toastr.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
-            ]
+            "styles": ["src/styles.css"],
+            "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "ec75aef0-e2fc-4eed-821f-86368b7d50f0"
   }
 }

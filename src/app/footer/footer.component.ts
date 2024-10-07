@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import {  FormControl, FormGroup, Validators } from '@angular/forms';
-
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css'],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
 })
 export class FooterComponent {
   constructor(private toastr: ToastrService) {}
-  
 
   emailForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email])
-  })
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
+
   onSubmit() {
     if (this.emailForm.valid) {
       this.showSuccess();
@@ -26,6 +33,7 @@ export class FooterComponent {
   showSuccess() {
     this.toastr.success('Thank you! Your message has been sent.');
   }
+
   showError() {
     this.toastr.error('Error: Please send a valid email.');
   }
