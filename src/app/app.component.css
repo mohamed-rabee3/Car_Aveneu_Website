@@ -1,0 +1,7 @@
+@import "primeflex/primeflex.css";
+html,
+body {
+  height: 100%; /* Ensure the page takes the full height */
+  margin: 0;
+  padding: 0;
+}
