@@ -1,0 +1,178 @@
+/* Basic Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar container to align content */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px; /* Adjust this value for the size you want */
+  transition: all 0.3s ease; /* Smooth transition when changing images */
+}
+
+.navbar.scrolled .logo-img {
+  height: 60px; /* Adjust height on scroll, if desired */
+}
+
+/* Menu Items */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.menu li .menu-items {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+}
+
+/* Hover Effect */
+.menu li .menu-items:hover {
+  color: #b6aa04;
+}
+
+.navbar.scrolled .menu li a {
+  color: black;
+}
+
+/* Cart and User Icons */
+.cart,
+.user {
+  position: relative;
+  cursor: pointer;
+}
+
+.pi {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar.scrolled .pi {
+  color: black;
+}
+
+/* Cart Badge */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+}
+
+/* User Menu */
+.user-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.user-menu {
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.submenu {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+}
+.user-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger .pi-bars {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.navbar.scrolled .hamburger .pi-bars {
+  color: black;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  .pi {
+    color: black;
+  }
+  .menu li .menu-items {
+    color: black;
+  }
+
+  .menu.menu-open {
+    display: flex;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  /* Hamburger Button Visible on Mobile */
+  .hamburger {
+    display: block;
+  }
+}
