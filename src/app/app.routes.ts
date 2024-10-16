@@ -5,7 +5,7 @@ import { CarsForSaleComponent } from './pages/cars-for-sale/cars-for-sale.compon
 import { AboutComponent } from './pages/about/about.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
-import { NavbarComponent } from './Components/navbar/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const routes: Routes = [
   //pages routing
