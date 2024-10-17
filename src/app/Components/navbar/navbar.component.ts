@@ -1,18 +1,20 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SidebarModule } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule, SidebarModule],
 })
 export class NavbarComponent {
   isScrolled = false;
   cartItemCount = 50;
   isUserMenuOpen = false;
   isMenuOpen = false;
+  sidebarVisible: boolean = false;
 
   // Listen to scroll events to change navbar background and logo on scroll
   @HostListener('window:scroll', [])

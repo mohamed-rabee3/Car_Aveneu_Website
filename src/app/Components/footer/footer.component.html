@@ -1,64 +1,91 @@
-<footer class="bg-black-alpha-90">
-  <div class="grid">
-    <div class="border-bottom-1 border-secondary grid col-12 p-7">
-      <div class="col-12 text-light my-3 md:col-4 lg:col-4">
-        <h3>Who are we ?</h3>
-        <p>
-          Car Avenue is your trusted partner for finding the perfect new or
-          pre-owned vehicle. With years of experience, we offer a diverse
-          selection of cars at competitive prices, paired with exceptional
-          customer service. Our mission is to make your car-buying experience
-          smooth and enjoyable from start to finish.
-        </p>
-      </div>
-      <div class="col-12 md:col-3 lg:col-3 text-light my-3">
-        <h3 class="">Site map</h3>
-        <ul class="">
-          <li><a href="" class="text-light fs-5">Home</a></li>
-          <li><a href="" class="text-light fs-5">Products</a></li>
-          <li><a href="" class="text-light fs-5">About Us</a></li>
-          <li><a href="" class="text-light fs-5">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-12 md:col-5 lg:col-5 my-2">
-        <h3 class="text-light">Newsletter</h3>
-        <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
-          <div class="input-group mb-3">
-            <input
-              type="email"
-              class="rounded-4 px-3 py-2 my-2"
-              style="width: 300px"
-              placeholder="Enter your email"
-              formControlName="email"
-            />
-            <button
-              class="fw-bold btn btn-warning border-0 rounded-4 px-4 py-2 ms-2 my-2"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </div>
-        </form>
-        <div class="row text-light my-2">
-          <div class="col-1 ms-3">
-            <i class="fa-brands fa-facebook fa-xl"></i>
-          </div>
-          <div class="col-1"><i class="fa-brands fa-twitter fa-xl"></i></div>
-          <div class="col-1"><i class="fa-brands fa-instagram fa-xl"></i></div>
-          <div class="col-1"><i class="fa-brands fa-youtube fa-xl"></i></div>
-          <div class="col-1"><i class="fa-brands fa-pinterest fa-xl"></i></div>
-        </div>
-        <p class="text-light fs-5 ms-3">Mobile : +2011119923009</p>
-        <p class="text-light fs-5 ms-3">Email : info&#64;CarAvenu.com</p>
-      </div>
-    </div>
+<footer class="bg-black-alpha-90 grid px-4">
+  <div class="col-12 md:col-5 lg:col-4 xl:col-3">
+    <h2 class="text-5xl text-white-alpha-90">Who are we ?</h2>
+    <p class="text-white-alpha-90 text-lg font-bold">
+      Car Avenue is your trusted partner for finding the perfect new or
+      pre-owned vehicle. With years of experience, we offer a diverse selection
+      of cars at competitive prices, paired with exceptional customer service.
+      Our mission is to make your car-buying experience smooth and enjoyable
+      from start to finish.
+    </p>
   </div>
-  <div class="flex justify-content-between flex-wrap">
-    <div class="flex align-items-center justify-content-center">
+  <div class="col-12 md:col-3 lg:col-3 xl:col-4 xl:pl-8">
+    <h2 class="text-5xl text-white-alpha-90">Site map</h2>
+    <ul class="list-disc text-2xl text-white-alpha-90">
+      <li>
+        <a href="" class="text-2xl text-white-alpha-90 no-underline">Home</a>
+      </li>
+      <li>
+        <a href="" class="text-2xl text-white-alpha-90 no-underline"
+          >Products</a
+        >
+      </li>
+      <li>
+        <a href="" class="text-2xl text-white-alpha-90 no-underline"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a href="" class="text-2xl text-white-alpha-90 no-underline"
+          >Contact Us</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="col-12 md:col-4 lg:col-5 xl:4">
+    <h2 class="text-5xl text-white-alpha-90">Newsletter</h2>
+    <div
+      class="formgroup-inline"
+      [formGroup]="emailForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="field">
+        <label for="email" class="p-sr-only">email</label>
+        <input
+          id="email"
+          type="text"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary"
+          placeholder="enter valid email"
+        />
+      </div>
+      <button
+        type="submit"
+        class="bg-yellow-500 border-yellow-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-cyan-100 hover:border-cyan-100 active:bg-cyan-100 active:border-primary-700"
+      >
+        Subscribe
+      </button>
+    </div>
+
+    <div class="social-icons my-2">
+      <a href="#" class="social-icon facebook"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="social-icon pinterest"
+        ><i class="fab fa-pinterest-p"></i
+      ></a>
+    </div>
+
+    <p class="text-white-alpha-90 text-lg">Mobile : +2011119923009</p>
+    <p class="text-white-alpha-90 text-lg">Email : info&#64;CarAvenu.com</p>
+  </div>
+
+  <div class="grid col-12 align-items-center border-line">
+    <div
+      class="col-12 md:col-7 justify-content-center align-items-center flex md:justify-content-start align-items-center"
+    >
       <img src="/img/logo.png" alt="CarAvenu" style="width: 70px" />
     </div>
-    <div class="flex align-items-center justify-content-center">
-      <p class="text-light">© ​2024 CarAvenu, Inc. All rights reserved&nbsp;</p>
+    <div class="col-12 md:col-5">
+      <p
+        class="text-white-alpha-90 text-md flex align-items-center justify-content-center md:justify-content-end md:text-sm"
+      >
+        © ​2024 CarAvenu, Inc. All rights reserved&nbsp;
+      </p>
     </div>
   </div>
 </footer>

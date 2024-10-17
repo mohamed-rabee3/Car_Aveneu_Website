@@ -1,4 +1,14 @@
-<app-navbar></app-navbar>
-<app-footer></app-footer>
+<div class="min-h-screen flex flex-column">
+  <!-- Sticky Navbar -->
+  <app-navbar></app-navbar>
 
-<router-outlet></router-outlet>
+  <!-- Main Content -->
+  <div class="flex-grow-1" style="margin-top: -90px">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Sticky Footer -->
+  <app-footer></app-footer>
+</div>
+
+<p-scrollTop icon="pi pi-arrow-up" styleClass="bg-blue-500 opacity-50" />

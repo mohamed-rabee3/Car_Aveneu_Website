@@ -1,16 +1,3 @@
-@import "primeflex/primeflex.css";
-html,
 body {
-  height: 100%; /* Ensure the page takes the full height */
   margin: 0;
-  padding: 0;
-}
-
-.container-flex {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
 }
