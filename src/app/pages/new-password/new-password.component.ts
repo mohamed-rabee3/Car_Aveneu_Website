@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Password } from 'primeng/password';
 import { Router } from '@angular/router';
@@ -12,14 +12,38 @@ import { Router } from '@angular/router';
   styleUrl: './new-password.component.css'
 })
 export class NewPasswordComponent {
+  newPassword: FormGroup;
 
-  constructor(private router : Router){}
-  newPassword =  new FormGroup({
-    Password: new FormControl("",[Validators.required]),
-    confirmPassword: new FormControl("",[Validators.required]),
-    })
+  constructor(private router: Router, private fb: FormBuilder) {
+    this.newPassword = this.fb.group({
+      Password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', Validators.required]
+    }, { validators: this.passwordsMatchValidator }); 
+  }
 
-    loginNavigate(){
-      this.router.navigate(['/login']);
+  passwordsMatchValidator(formGroup: FormGroup) {
+    const password = formGroup.get('Password')?.value;
+    const confirmPassword = formGroup.get('confirmPassword')?.value;
+
+    return password === confirmPassword ? null : { passwordMismatch: true };
+  }
+
+
+  onConfirm() {
+    if (this.newPassword.valid) {
+      this.loginNavigate();
+    } else {
+      this.newPassword.markAllAsTouched();
     }
+  }
+
+
+  loginNavigate() {
+    this.router.navigate(['/login']);
+  }
+
+
+  get passwordMismatch() {
+    return this.newPassword.errors?.['passwordMismatch'];
+  }
 }

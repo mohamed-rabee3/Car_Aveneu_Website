@@ -15,9 +15,17 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   constructor(private router: Router){}
   login =  new FormGroup({
-    email: new FormControl("",[Validators.required]),
+    email: new FormControl("",[Validators.required, Validators.email]),
     Password: new FormControl("",[Validators.required]),
     })
+
+    onLogin() {
+      if (this.login.valid) {
+        this.homeNavigate();
+      } else {
+        this.login.markAllAsTouched();
+      }
+    }
 
     homeNavigate(){
       this.router.navigate(['/home']);
