@@ -1,0 +1,51 @@
+<div class="full-page flex align-items-center justify-content-center h-screen">
+    <div class="form bg-transparent w-10 mt-auto mb-5 sm:w-8 md:w-6 lg:w-4 border-round-md p-4">
+      <h2 class="text-white mt-3 text-center">Login</h2>
+      <form class="p-fluid flex flex-column align-items-center justify-content-center" [formGroup]="login">
+          <div class="field w-full">
+            <label class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start">Email</label>
+            <div class="flex justify-content-center">
+              <input
+                type="email"
+                class="form-control border-round-xl p-inputtext p-2  p-component w-10"
+                formControlName="email"
+                placeholder="Please enter your email"
+              />
+            </div>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="login.controls['email'].invalid && 
+            (login.controls['email'].touched || login.controls['email'].dirty)">
+            <span *ngIf="login.controls['email'].errors?.['required']">This is required</span>
+          </div>
+        </div>
+        <div class="field w-full">
+            <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Password</label>
+            <div class="flex justify-content-center">
+              <input
+                type="password"
+                class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+                formControlName="Password"
+                placeholder="Please enter your password"
+              />
+            </div>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="login.controls['Password'].invalid && 
+            (login.controls['Password'].touched || login.controls['Password'].dirty)">
+            <span *ngIf="login.controls['Password'].errors?.['required']">This is required</span>
+          </div>
+        </div>
+        <div class="field-checkbox w-full my-3  flex justify-content-between align-items-center">
+          <div class="flex align-items-center ml-4">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe" class="text-white ml-2">Remember me</label>
+          </div>
+          <a href="#" class="text-white no-underline ">Forgot password?</a>
+        </div>
+        <div class="field w-full flex justify-content-center">
+          <button class="w-8 pt-3 pb-2 mb-2 bg-yellow-400 hover:surface-400 hover:text-white font-bold border-round-xl" type="button">Login</button>
+        </div>
+        <div class="text-white text-center my-2">
+          <p>Don't have an account? <a href="#" class="text-yellow-400 no-underline font-bold">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  

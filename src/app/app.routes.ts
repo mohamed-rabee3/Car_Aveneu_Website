@@ -6,6 +6,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
   //pages routing
@@ -33,7 +34,11 @@ export const routes: Routes = [
     path: 'checkout',
     component: CheckoutComponent,
   },
-
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  
   //components routing
   {
     path: 'navbar',

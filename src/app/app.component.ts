@@ -5,6 +5,7 @@ import { CarsForSaleComponent } from './pages/cars-for-sale/cars-for-sale.compon
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
     ScrollTopModule,
     CarsForSaleComponent,
     HomeComponent,
+    LoginComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
