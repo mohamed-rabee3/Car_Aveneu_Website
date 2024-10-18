@@ -6,6 +6,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { LoginComponent } from './pages/login/login.component';
     ScrollTopModule,
     CarsForSaleComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewPasswordComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

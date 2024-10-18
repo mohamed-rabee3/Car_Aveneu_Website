@@ -37,10 +37,11 @@
             <input type="checkbox" id="rememberMe" />
             <label for="rememberMe" class="text-white ml-2">Remember me</label>
           </div>
-          <a href="#" class="text-white no-underline ">Forgot password?</a>
+          <a href="newPassword" class="text-white no-underline ">Forgot password?</a>
         </div>
         <div class="field w-full flex justify-content-center">
-          <button class="w-8 pt-3 pb-2 mb-2 bg-yellow-400 hover:surface-400 hover:text-white font-bold border-round-xl" type="button">Login</button>
+          <button class="w-8 pt-3 pb-2 mb-2 bg-yellow-400 hover:surface-400 
+          hover:text-white font-bold border-round-xl" (click)="homeNavigate()" type="button">Login</button>
         </div>
         <div class="text-white text-center my-2">
           <p>Don't have an account? <a href="#" class="text-yellow-400 no-underline font-bold">Register</a></p>

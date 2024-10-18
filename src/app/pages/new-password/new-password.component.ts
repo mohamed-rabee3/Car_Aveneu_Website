@@ -4,22 +4,22 @@ import { CommonModule } from '@angular/common';
 import { Password } from 'primeng/password';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-login',
+  selector: 'app-new-password',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './new-password.component.html',
+  styleUrl: './new-password.component.css'
 })
-export class LoginComponent {
-  constructor(private router: Router){}
-  login =  new FormGroup({
-    email: new FormControl("",[Validators.required]),
+export class NewPasswordComponent {
+
+  constructor(private router : Router){}
+  newPassword =  new FormGroup({
     Password: new FormControl("",[Validators.required]),
+    confirmPassword: new FormControl("",[Validators.required]),
     })
 
-    homeNavigate(){
-      this.router.navigate(['/home']);
+    loginNavigate(){
+      this.router.navigate(['/login']);
     }
 }
