@@ -8,6 +8,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 export const routes: Routes = [
   //pages routing
@@ -43,7 +44,12 @@ export const routes: Routes = [
     path: 'newPassword',
     component: NewPasswordComponent,
   },
-  
+  {
+    path: 'signup',
+    component: SignUpComponent,
+
+  }
+  ,
   //components routing
   {
     path: 'navbar',
