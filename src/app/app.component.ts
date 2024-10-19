@@ -8,6 +8,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NewPasswordComponent } from './pages/new-password/new-password.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { ButtonModule } from 'primeng/button';
+import { AccordionModule } from 'primeng/accordion';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -22,7 +26,11 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
+   LoginComponent,
+    ButtonModule, 
+    AccordionModule,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
