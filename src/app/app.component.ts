@@ -6,6 +6,8 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +24,9 @@ import { FormsModule } from '@angular/forms';
     ScrollTopModule,
     CarsForSaleComponent,
     HomeComponent,
+    LoginComponent,
+    SignUpComponent,
+    NewPasswordComponent
     LoginComponent,
     ButtonModule, 
     AccordionModule,

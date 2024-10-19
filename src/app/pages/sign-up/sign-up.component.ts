@@ -6,28 +6,29 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-SignUp',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css'
 })
-export class LoginComponent {
+export class SignUpComponent {
   constructor(private router: Router){}
-  login =  new FormGroup({
+  signup =  new FormGroup({
     email: new FormControl("",[Validators.required, Validators.email]),
-    Password: new FormControl("",[Validators.required]),
+    text: new FormControl("",[Validators.required]),
+    Password: new FormControl("",[Validators.required, Validators.minLength(6)])
     })
 
-    onLogin() {
-      if (this.login.valid) {
-        this.homeNavigate();
+    onsignup() {
+      if (this.signup.valid) {
+        this.loginNavigate();
       } else {
-        this.login.markAllAsTouched();
+        this.signup.markAllAsTouched();
       }
     }
 
-    homeNavigate(){
-      this.router.navigate(['/home']);
+    loginNavigate(){
+      this.router.navigate(['/login']);
     }
 }
