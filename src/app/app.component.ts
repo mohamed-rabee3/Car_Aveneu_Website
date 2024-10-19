@@ -6,6 +6,10 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ButtonModule } from 'primeng/button';
+import { AccordionModule } from 'primeng/accordion';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -18,7 +22,10 @@ import { LoginComponent } from './pages/login/login.component';
     ScrollTopModule,
     CarsForSaleComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ButtonModule, 
+    AccordionModule,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
