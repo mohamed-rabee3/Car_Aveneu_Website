@@ -26,8 +26,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    NewPasswordComponent
-    LoginComponent,
+    NewPasswordComponent,
+   LoginComponent,
     ButtonModule, 
     AccordionModule,
     FormsModule
