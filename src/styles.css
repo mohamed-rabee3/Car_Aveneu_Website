@@ -2,11 +2,13 @@
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
 
-/* body {
- 
+* {
   margin: 0;
-} */
-
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
+  height: 100vh;
   margin: 0;
+  background-color: #000000;
 }

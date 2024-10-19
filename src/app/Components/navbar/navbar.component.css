@@ -42,6 +42,7 @@
 
 /* Menu Items */
 .menu {
+  margin-top: 24.33333px;
   display: flex;
   list-style: none;
   gap: 20px;
