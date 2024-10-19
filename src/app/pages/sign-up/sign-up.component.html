@@ -14,9 +14,9 @@
                 placeholder="Please enter your Username"
               />
             </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['text'].invalid && 
-            (signup.controls['text'].touched || signup.controls['text'].dirty)">
-            <span *ngIf="signup.controls['text'].errors?.['required']">This is required</span>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['username'].invalid && 
+            (signup.controls['username'].touched || signup.controls['username'].dirty)">
+            <span *ngIf="signup.controls['username'].errors?.['required']">This is required</span>
           </div>
         </div>
 
@@ -50,13 +50,13 @@
               <input
                 type="text"
                 class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="text"
+                formControlName="phone"
                 placeholder="Please enter your phone number"
               />
             </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['text'].invalid && 
-            (signup.controls['text'].touched || signup.controls['text'].dirty)">
-            <span *ngIf="signup.controls['text'].errors?.['text']">This is required</span>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['phone'].invalid && 
+            (signup.controls['phone'].touched || signup.controls['phone'].dirty)">
+            <span *ngIf="signup.controls['phone'].errors?.['phone']">This is required</span>
           </div>
         </div>
 
@@ -88,13 +88,13 @@
               <input
                 type="password"
                 class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="Password"
+                formControlName="confirmPassword"
                 placeholder="Please re-enter your password"
               />
             </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['Password'].invalid && 
-            (signup.controls['Password'].touched || signup.controls['Password'].dirty)">
-            <span *ngIf="signup.controls['Password'].errors?.['required']">This is required</span>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['confirmPassword'].invalid && 
+            (signup.controls['confirmPassword'].touched || signup.controls['confirmPassword'].dirty)">
+            <span *ngIf="signup.controls['confirmPassword'].errors?.['required']">This is required</span>
           </div>
         </div>
 
