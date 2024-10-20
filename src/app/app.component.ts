@@ -12,6 +12,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+
 import { CartModalComponent } from './Components/cart/cart.component';
 import { CarFiltersComponent } from './Components/filters/filters.component';
 import { CartService } from './services/cart.service';
@@ -36,6 +38,8 @@ import { CartService } from './services/cart.service';
     FormsModule,
     CartModalComponent,
     CarFiltersComponent,
+    FormsModule,
+    InputTextModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

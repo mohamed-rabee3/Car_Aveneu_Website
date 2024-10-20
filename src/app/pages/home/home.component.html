@@ -28,9 +28,7 @@
         nesciunt amet adipisci.
       </p>
     </div>
-    <div
-      class="justify-content-center align-items-center flex md:flex-row flex-column"
-    >
+    <div class="justify-content-center align-items-center flex md:flex-row flex-column">
       <div class="partion align-items-center text-center p-6">
         <div class="imagebackground">
           <img src="/img/1.png" alt="" />
@@ -138,14 +136,14 @@
     </div>
   </div>
 
-  <div class="FAQ align-items-center py-5">
+  <div class="FAQ align-items-center py-3">
     <div class="h2 py-6 text-center align-items-center justify-content-center">
       <h1>FAQ</h1>
     </div>
     <div class="px-7 py-4">
       <div class="card flex justify-content-center">
         <p-accordion [activeIndex]="0">
-          <p-accordionTab header="Header I" class="">
+          <p-accordionTab header="Header I" class="Tabs">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -195,6 +193,45 @@
       </p>
       <h1 class="p-3">Your feedback and iquiries are important to us!</h1>
     </div>
-    <div class="rhs p-7"></div>
+    <div class="rhs pt-7 mr-7 mb-7  flex flex-column">
+      <div class="card flex justify-content-center pb-3">
+        <div class="flex flex-column gap-2">
+            <label for="username">ُEmail</label>
+            <input 
+                pInputText
+                id="email" 
+                aria-describedby="username-help" 
+                [(ngModel)]="email" type="email"/>
+        </div>
+      </div>
+
+      <div class="card flex justify-content-center pb-3">
+        <div class="flex flex-column flex-row gap-2">
+            <label for="username">Phone</label>
+            <input 
+                pInputText
+                id="Phone" 
+                aria-describedby="telphone" 
+                [(ngModel)]="number" type="tel"/>
+        </div>
+      </div>
+
+      <div class="card flex flex-column justify-content-center mb-5 ml-6 "> 
+        <label for="input" class="pl-8 pr-5 pb-2">Your Message</label>
+        <div class="card flex flex-column px-8  justify-content-center">
+          <textarea 
+              rows="5"
+              cols="30"
+              pInputTextarea 
+              [(ngModel)]="text"
+              [autoResize]="true">
+          </textarea>
+        </div>
+      </div>
+      
+      <button class="button ml-8" type="submit">Submit</button>
+      
+    </div>
+    
   </div>
 </div>
