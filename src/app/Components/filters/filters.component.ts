@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   template: `
-    <div class="filters-container">
+    <div class="filters-container ">
       <form [formGroup]="filterForm" class="filters-form">
         <!-- Model Dropdown -->
         <select formControlName="model" class="filter-select">
@@ -49,10 +49,13 @@ import { ReactiveFormsModule } from '@angular/forms';
         padding: 1rem;
         background-color: rgp(0, 0, 0);
         border-radius: 8px;
+        background-color:rgb(241, 197, 14);
+        width:100%;
       }
 
       .filters-form {
         display: flex;
+        flex-direction:row;
         gap: 1rem;
         align-items: center;
       }
@@ -81,11 +84,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
       @media (max-width: 768px) {
         .filters-form {
-          flex-direction: column;
+          flex-direction:column;
         }
 
         .filter-select {
-          width: 100%;
+          width: 10%;
         }
       }
     `,
