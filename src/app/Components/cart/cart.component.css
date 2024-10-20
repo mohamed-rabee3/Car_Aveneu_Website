@@ -34,10 +34,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: yellow;
 }
 
 .modal-body {
   padding: 1rem;
+  background-color: black;
+  color: white;
 }
 
 .modal-footer {
@@ -46,6 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: yellow;
 }
 
 .cart-item {
@@ -88,4 +92,10 @@
   text-align: center;
   padding: 2rem;
   color: #666;
+}
+
+.close-btn{
+  color:white;
+  background: red;
+  border-radius: 20px;
 }
