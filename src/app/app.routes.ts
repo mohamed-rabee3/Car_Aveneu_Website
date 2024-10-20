@@ -16,6 +16,9 @@ import { CartService } from './services/cart.service';
 export const routes: Routes = [
   //pages routing
 
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  { path: 'home', component: HomeComponent },
+
   {
     path: 'home',
     component: HomeComponent,
