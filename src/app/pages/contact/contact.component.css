@@ -1,0 +1,11 @@
+.background{
+    background-image: url("/img/contact.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+.bg-black{
+    background-color: black;
+}
