@@ -1,9 +1,7 @@
-<div class="full-page flex align-items-center justify-content-center h-screen">
-    <div class="form bg-transparent w-10 mt-auto mb-5 sm:w-8 md:w-6 lg:w-4 border-round-md p-4">
+<div class="full-page flex align-items-center justify-content-center h-auto">
+    <div class="form bg-transparent w-10 my-8 mb-5 sm:w-8 md:w-6 lg:w-4 border-round-md p-4">
       <h2 class="text-white mt-3 text-center">SignUp</h2>
-      <form class="p-fluid flex flex-column align-items-center justify-content-center" >
-
-
+      <form [formGroup]="signup" class="p-fluid flex flex-column align-items-center justify-content-center">
         <div class="field w-full">
             <label class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start">UserName</label>
             <div class="flex justify-content-center">
@@ -25,7 +23,7 @@
 
 
           <div class="field w-full">
-            <label class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start">Email</label>
+            <label class="form-label my-2 text-white lg:ml-6 ml-4 flex align-items-start">Email</label>
             <div class="flex justify-content-center">
               <input
                 type="email"
@@ -45,18 +43,18 @@
 
 
         <div class="field w-full">
-            <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Your Phone Number</label>
-            <div class="flex justify-content-center">
-              <input
-                type="text"
-                class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="phone"
-                placeholder="Please enter your phone number"
-              />
-            </div>
+          <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Your Phone Number</label>
+          <div class="flex justify-content-center">
+            <input
+              type="text"
+              class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+              formControlName="phone"
+              placeholder="Please enter your phone number"
+            />
+          </div>
           <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['phone'].invalid && 
             (signup.controls['phone'].touched || signup.controls['phone'].dirty)">
-            <span *ngIf="signup.controls['phone'].errors?.['phone']">This is required</span>
+            <span *ngIf="signup.controls['phone'].errors?.['required']">This is required</span>
           </div>
         </div>
 
@@ -70,15 +68,17 @@
               <input
                 type="password"
                 class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="Password"
+                formControlName="password"
                 placeholder="Please enter your password"
               />
             </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['Password'].invalid && 
-            (signup.controls['Password'].touched || signup.controls['Password'].dirty)">
-            <span *ngIf="signup.controls['Password'].errors?.['required']">This is required</span>
+          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['password'].invalid && 
+            (signup.controls['password'].touched || signup.controls['password'].dirty)">
+            <span *ngIf="signup.controls['password'].errors?.['required']">This is required</span>
+            <div *ngIf="signup.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</div>
+    </div>
           </div>
-        </div>
+        
 
 
 
@@ -92,11 +92,13 @@
                 placeholder="Please re-enter your password"
               />
             </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['confirmPassword'].invalid && 
-            (signup.controls['confirmPassword'].touched || signup.controls['confirmPassword'].dirty)">
-            <span *ngIf="signup.controls['confirmPassword'].errors?.['required']">This is required</span>
+            <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['confirmPassword'].touched || signup.controls['confirmPassword'].dirty">
+              <span *ngIf="signup.controls['confirmPassword'].errors?.['required']">This is required</span>
+              <div *ngIf="signup.controls['confirmPassword'].errors?.['minlength']">Confirm Password must be at least 6 characters long.</div>
+              <div *ngIf="signup.hasError('passwordMismatch')">Passwords do not match.</div>
+            </div>
           </div>
-        </div>
+          
 
 
 
