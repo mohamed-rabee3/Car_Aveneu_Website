@@ -25,12 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-    <div class="car-list">
-      <div class="car-card" *ngFor="let car of cars">
-        <img [src]="car.images[0]" alt="{{ car.model }} {{ car.model }}" />
-        <h3>{{ car.model }} {{ car.model }}</h3>
-        <p>{{ car.year }} - {{ car.price | currency : 'USD' : 'symbol' }}</p>
-        <button (click)="addToCart(car)">Add to Cart</button>
-      </div>
-    </div>

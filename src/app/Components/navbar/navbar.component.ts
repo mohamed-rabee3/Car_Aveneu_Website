@@ -1,50 +1,46 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarModule } from 'primeng/sidebar';
-import { CartService } from '../../services/cart.service';
-import { CartModalComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, SidebarModule, CartModalComponent],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
+  imports: [CommonModule, SidebarModule],
 })
 export class NavbarComponent {
   isScrolled = false;
-  isMenuOpen = false;
+  cartItemCount = 50;
   isUserMenuOpen = false;
-  cartCount$;
+  isMenuOpen = false;
+  sidebarVisible: boolean = false;
 
-  constructor(private cartService: CartService) {
-    this.cartCount$ = this.cartService.getCartCount();
-  }
-
-  @HostListener('window:scroll')
+  // Listen to scroll events to change navbar background and logo on scroll
+  @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    this.isScrolled = scrollTop > 50; // Change logo after scrolling 50px
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
+  // Toggle user menu dropdown
   toggleUserMenu() {
     this.isUserMenuOpen = !this.isUserMenuOpen;
   }
 
-  toggleCart() {
-    this.cartService.toggleCart();
+  // Toggle the hamburger menu for mobile view
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
-  hoverItem(event: MouseEvent) {
-    // Your existing hover logic
-    console.log('Item hovered', event.target);
+  // Hover effect for menu items
+  hoverItem(event: Event) {
+    const target = event.target as HTMLElement;
+    target.style.color = '#b6aa04';
   }
 
-  unhoverItem(event: MouseEvent) {
-    // Logic for when mouse leaves the item
-    console.log('Item unhovered', event.target);
+  unhoverItem(event: Event) {
+    const target = event.target as HTMLElement;
+    target.style.color = '';
   }
 }
