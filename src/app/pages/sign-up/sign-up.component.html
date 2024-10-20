@@ -1,111 +1,153 @@
 <div class="full-page flex align-items-center justify-content-center h-screen">
-    <div class="form bg-transparent w-10 mt-auto mb-5 sm:w-8 md:w-6 lg:w-4 border-round-md p-4">
-      <h2 class="text-white mt-3 text-center">SignUp</h2>
-      <form class="p-fluid flex flex-column align-items-center justify-content-center" >
-
-
-        <div class="field w-full">
-            <label class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start">UserName</label>
-            <div class="flex justify-content-center">
-              <input
-                type="text"
-                class="form-control border-round-xl p-inputtext p-2  p-component w-10"
-                formControlName="username"
-                placeholder="Please enter your Username"
-              />
-            </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['text'].invalid && 
-            (signup.controls['text'].touched || signup.controls['text'].dirty)">
-            <span *ngIf="signup.controls['text'].errors?.['required']">This is required</span>
-          </div>
+  <div
+    class="form bg-transparent w-10 mt-auto mb-5 sm:w-8 md:w-6 lg:w-4 border-round-md p-4"
+  >
+    <h2 class="text-white mt-3 text-center">SignUp</h2>
+    <form
+      class="p-fluid flex flex-column align-items-center justify-content-center"
+    >
+      <div class="field w-full">
+        <label
+          class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start"
+          >UserName</label
+        >
+        <div class="flex justify-content-center">
+          <input
+            type="text"
+            class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+            formControlName="username"
+            placeholder="Please enter your Username"
+          />
         </div>
-
-
-
-
-
-          <div class="field w-full">
-            <label class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start">Email</label>
-            <div class="flex justify-content-center">
-              <input
-                type="email"
-                class="form-control border-round-xl p-inputtext p-2  p-component w-10"
-                formControlName="email"
-                placeholder="Please enter your email"
-              />
-            </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['email'].invalid && 
-            (signup.controls['email'].touched || signup.controls['email'].dirty)">
-            <span *ngIf="signup.controls['email'].errors?.['required']">This is required</span>
-          </div>
+        <div
+          class="text-red-700 mt-2 ml-6"
+          *ngIf="
+            signup.controls['text'].invalid &&
+            (signup.controls['text'].touched || signup.controls['text'].dirty)
+          "
+        >
+          <span *ngIf="signup.controls['text'].errors?.['required']"
+            >This is required</span
+          >
         </div>
+      </div>
 
-
-
-
-
-        <div class="field w-full">
-            <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Your Phone Number</label>
-            <div class="flex justify-content-center">
-              <input
-                type="text"
-                class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="text"
-                placeholder="Please enter your phone number"
-              />
-            </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['text'].invalid && 
-            (signup.controls['text'].touched || signup.controls['text'].dirty)">
-            <span *ngIf="signup.controls['text'].errors?.['text']">This is required</span>
-          </div>
+      <div class="field w-full">
+        <label
+          class="form-label mt-6 mb-2 text-white lg:ml-6 ml-4 flex align-items-start"
+          >Email</label
+        >
+        <div class="flex justify-content-center">
+          <input
+            type="email"
+            class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+            formControlName="email"
+            placeholder="Please enter your email"
+          />
         </div>
-
-
-
-
-
-        <div class="field w-full">
-            <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Password</label>
-            <div class="flex justify-content-center">
-              <input
-                type="password"
-                class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="Password"
-                placeholder="Please enter your password"
-              />
-            </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['Password'].invalid && 
-            (signup.controls['Password'].touched || signup.controls['Password'].dirty)">
-            <span *ngIf="signup.controls['Password'].errors?.['required']">This is required</span>
-          </div>
+        <div
+          class="text-red-700 mt-2 ml-6"
+          *ngIf="
+            signup.controls['email'].invalid &&
+            (signup.controls['email'].touched || signup.controls['email'].dirty)
+          "
+        >
+          <span *ngIf="signup.controls['email'].errors?.['required']"
+            >This is required</span
+          >
         </div>
+      </div>
 
-
-
-        <div class="field w-full">
-            <label class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start">Confirm Password</label>
-            <div class="flex justify-content-center">
-              <input
-                type="password"
-                class="form-control border-round-xl p-inputtext p-2 p-component w-10"
-                formControlName="Password"
-                placeholder="Please re-enter your password"
-              />
-            </div>
-          <div class="text-red-700 mt-2 ml-6" *ngIf="signup.controls['Password'].invalid && 
-            (signup.controls['Password'].touched || signup.controls['Password'].dirty)">
-            <span *ngIf="signup.controls['Password'].errors?.['required']">This is required</span>
-          </div>
+      <div class="field w-full">
+        <label
+          class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start"
+          >Your Phone Number</label
+        >
+        <div class="flex justify-content-center">
+          <input
+            type="text"
+            class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+            formControlName="text"
+            placeholder="Please enter your phone number"
+          />
         </div>
-
-
-
-<br><br>
-        <div class="field w-full flex justify-content-center">
-           <button class="w-8 pt-3 pb-2 mb-2 bg-yellow-400 hover:surface-400 
-          hover:text-white font-bold border-round-xl" (click)="onsignup()" type="button">Register</button>
+        <div
+          class="text-red-700 mt-2 ml-6"
+          *ngIf="
+            signup.controls['text'].invalid &&
+            (signup.controls['text'].touched || signup.controls['text'].dirty)
+          "
+        >
+          <span *ngIf="signup.controls['text'].errors?.['text']"
+            >This is required</span
+          >
         </div>
-    
-      </form>
-    </div>
+      </div>
+
+      <div class="field w-full">
+        <label
+          class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start"
+          >Password</label
+        >
+        <div class="flex justify-content-center">
+          <input
+            type="password"
+            class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+            formControlName="Password"
+            placeholder="Please enter your password"
+          />
+        </div>
+        <div
+          class="text-red-700 mt-2 ml-6"
+          *ngIf="
+            signup.controls['Password'].invalid &&
+            (signup.controls['Password'].touched ||
+              signup.controls['Password'].dirty)
+          "
+        >
+          <span *ngIf="signup.controls['Password'].errors?.['required']"
+            >This is required</span
+          >
+        </div>
+      </div>
+
+      <div class="field w-full">
+        <label
+          class="form-label my-3 text-white lg:ml-6 ml-4 flex align-items-start"
+          >Confirm Password</label
+        >
+        <div class="flex justify-content-center">
+          <input
+            type="password"
+            class="form-control border-round-xl p-inputtext p-2 p-component w-10"
+            formControlName="Password"
+            placeholder="Please re-enter your password"
+          />
+        </div>
+        <div
+          class="text-red-700 mt-2 ml-6"
+          *ngIf="
+            signup.controls['Password'].invalid &&
+            (signup.controls['Password'].touched ||
+              signup.controls['Password'].dirty)
+          "
+        >
+          <span *ngIf="signup.controls['Password'].errors?.['required']"
+            >This is required</span
+          >
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="field w-full flex justify-content-center">
+        <button
+          class="w-8 pt-3 pb-2 mb-2 bg-yellow-400 hover:surface-400 hover:text-white font-bold border-round-xl"
+          (click)="onsignup()"
+          type="button"
+        >
+          Register
+        </button>
+      </div>
+    </form>
   </div>
+</div>

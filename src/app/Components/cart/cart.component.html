@@ -1,0 +1,41 @@
+<!-- Modal is visible based on isCartOpen$ observable -->
+<div
+  class="modal-overlay"
+  [class.show]="isCartOpen$ | async"
+  (click)="closeModal()"
+>
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Shopping Cart</h2>
+      <button class="close-btn" (click)="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <ng-container *ngIf="(cartItems$ | async)?.length === 0">
+        <div class="empty-cart">Your cart is empty</div>
+      </ng-container>
+      <ng-container *ngFor="let item of cartItems$ | async">
+        <div class="cart-item">
+          <img
+            [src]="item.images[0]"
+            [alt]="item.model"
+            class="cart-item-image"
+          />
+          <div class="cart-item-details">
+            <h3>{{ item.model }}</h3>
+            <p>{{ item.year }}</p>
+            <p>{{ item.price | currency }}</p>
+          </div>
+          <button class="remove-btn" (click)="removeItem(item.id)">
+            Remove
+          </button>
+        </div>
+      </ng-container>
+    </div>
+    <div class="modal-footer" *ngIf="(cartItems$ | async)?.length ?? 0 > 0">
+      <div class="total">
+        <strong>Total:</strong> {{ totalPrice$ | async | currency }}
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+</div>

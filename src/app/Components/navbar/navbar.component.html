@@ -45,7 +45,7 @@
       <li>
         <a
           class="menu-items"
-          href="#"
+          href="car-list"
           (mouseover)="hoverItem($event)"
           (mouseout)="unhoverItem($event)"
           >Contact</a
@@ -53,9 +53,11 @@
       </li>
 
       <!-- Cart Icon -->
-      <li class="cart">
+      <li class="cart" (click)="toggleCart()">
         <i class="pi pi-shopping-cart"></i>
-        <span class="badge">{{ cartItemCount }}</span>
+        <span class="badge" *ngIf="cartCount$ | async as cartCount">
+          {{ cartCount > 0 ? cartCount : "" }}
+        </span>
       </li>
 
       <!-- User Icon with Dropdown -->
@@ -69,3 +71,4 @@
     </ul>
   </div>
 </nav>
+<app-cart></app-cart>
