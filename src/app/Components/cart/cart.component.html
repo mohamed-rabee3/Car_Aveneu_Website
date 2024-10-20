@@ -6,8 +6,8 @@
 >
   <div class="modal-content" (click)="$event.stopPropagation()">
     <div class="modal-header">
-      <h2>Shopping Cart</h2>
-      <button class="close-btn" (click)="closeModal()">×</button>
+      <h3 class="m-auto ">Shopping Cart</h3>
+      <button class="close-btn p-1 red-500" (click)="closeModal()"><i class="pi pi-times " style="font-size: 1.5rem"></i></button>
     </div>
     <div class="modal-body">
       <ng-container *ngIf="(cartItems$ | async)?.length === 0">
