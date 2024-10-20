@@ -11,6 +11,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @Component({
@@ -30,7 +31,9 @@ import { FormsModule } from '@angular/forms';
    LoginComponent,
     ButtonModule, 
     AccordionModule,
-    FormsModule
+    FormsModule,
+    InputTextModule
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
