@@ -1,36 +1,85 @@
-# CARAVENEUWEBSITE
+# Car Aveneu
+## Description
+Welcome to Car Aveneu, a frontend-only Angular application simulating a car dealership's user interface. This project serves as a pseudo car dealership, showcasing various frontend functionalities such as vehicle listings, search filters, and user interactions. It is designed to demonstrate Angular development capabilities and can be used for educational or portfolio purposes.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+## Table of Contents
 
-## Development server
+Table of Contents
+- Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Installation
 
-## Code scaffolding
+- Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Technologies Used
 
-## Build
+- Contributing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- License
 
-## Running unit tests
+- Contact
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features
+- Vehicle Listings: Display a list of available vehicles with detailed information.
 
-## Running end-to-end tests
+- Search and Filters: Search for vehicles by make, model, year, and price range.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- User Interaction: Implement user-friendly interfaces for browsing and selecting vehicles.
 
-## Further help
+- Mock Data: Utilize dummy data to simulate a real car dealership environment.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Installation
+1. Clone the repository:
 
-    <div class="car-list">
-      <div class="car-card" *ngFor="let car of cars">
-        <img [src]="car.images[0]" alt="{{ car.model }} {{ car.model }}" />
-        <h3>{{ car.model }} {{ car.model }}</h3>
-        <p>{{ car.year }} - {{ car.price | currency : 'USD' : 'symbol' }}</p>
-        <button (click)="addToCart(car)">Add to Cart</button>
-      </div>
-    </div>
+bash
+``git clone https://github.com/yourusername/Car-Aveneu.git``
+2. Navigate to the project directory:
+``cd Car-Aveneu``
+3. Install project dependencies:
+``ng serve``
+4. Start the development server:
+``ng serve``
+5. Access the application:
+
+Open your browser and navigate to http://localhost:4200/.
+
+## Usage
+- Browse Vehicles: View the list of available vehicles and their details.
+
+- Search and Filter: Use the search bar and filters to find vehicles that match your criteria.
+
+- Interact with the UI: Explore different sections of the application to understand its functionalities.
+
+## Technologies Used
+- Angular: A powerful frontend framework for building web applications.
+
+- Angular CLI: Command-line interface for Angular development.
+
+- TypeScript: Superset of JavaScript for scalable and robust applications.
+
+- primeflex: CSS framework for responsive and mobile-first design.
+
+
+
+## Contributing
+We welcome contributions to improve Car Aveneu! Here's how you can contribute:
+
+1. Fork the repository.
+
+2. Create a new branch for your feature or bug fix.
+
+3. Make your changes and commit them.
+
+4. Push your changes to your forked repository.
+
+5. Submit a pull request.
+
+Please ensure that your code adheres to the existing coding standards and includes appropriate tests.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+For any questions or inquiries, please contact:
+
+- Email: info@caraveneu.com
