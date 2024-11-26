@@ -33,13 +33,17 @@ Table of Contents
 
 bash
 ``git clone https://github.com/yourusername/Car-Aveneu.git``
+
 2. Navigate to the project directory:
 ``cd Car-Aveneu``
-3. Install project dependencies:
+
+4. Install project dependencies:
 ``ng serve``
-4. Start the development server:
+
+6. Start the development server:
 ``ng serve``
-5. Access the application:
+
+8. Access the application:
 
 Open your browser and navigate to http://localhost:4200/.
 
