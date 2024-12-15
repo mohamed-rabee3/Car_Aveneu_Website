@@ -7,16 +7,14 @@
   height: 50vh;
   font-size: xx-large;
   font-weight: 600;
-  
 }
 
-.overlay{
+.overlay {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .image-block {
-  background-image: url("/img/products-page.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

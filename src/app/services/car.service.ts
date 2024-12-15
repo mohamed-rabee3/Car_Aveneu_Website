@@ -14,7 +14,7 @@ export class CarService {
       model: 'toyota corolla',
       year: 2019,
       price: 1_350_000,
-      images: ['/img/cars/toyota-corolla.jpg'],
+      images: ['img/cars/toyota-corolla.jpg'],
       specs: {
         engine: '1600cc',
         horsepower: 250,
@@ -25,7 +25,7 @@ export class CarService {
       model: 'nissan sunny',
       year: 2020,
       price: 1_000_000,
-      images: ['/img/cars/nissan-sunny.png'],
+      images: ['img/cars/nissan-sunny.png'],
       specs: {
         engine: '2000cc',
         horsepower: 250,
@@ -36,7 +36,7 @@ export class CarService {
       model: 'fiat 128',
       year: 1970,
       price: 100_000,
-      images: ['/img/cars/128.jpeg'],
+      images: ['img/cars/128.jpeg'],
       specs: {
         engine: '1600cc',
         horsepower: 250,
@@ -47,7 +47,7 @@ export class CarService {
       model: 'beetle',
       year: 1940,
       price: 1,
-      images: ['/img/cars/beetle.jpeg'],
+      images: ['img/cars/beetle.jpeg'],
       specs: {
         engine: '1600cc',
         horsepower: 10,
@@ -58,7 +58,7 @@ export class CarService {
       model: 'verna',
       year: 2013,
       price: 240_000,
-      images: ['/img/cars/verna.jpeg'],
+      images: ['img/cars/verna.jpeg'],
       specs: {
         engine: '1600cc',
         horsepower: 250,
@@ -69,7 +69,7 @@ export class CarService {
       model: 'mercedes Benz',
       year: 2024,
       price: 300_0000_000,
-      images: ['/img/cars/mercedes.jpg'],
+      images: ['img/cars/mercedes.jpg'],
       specs: {
         engine: '5000cc',
         horsepower: 600,
@@ -80,7 +80,7 @@ export class CarService {
       model: 'toyota supra mk5',
       year: 2019,
       price: 44_350_000,
-      images: ['./img/cars/toyta supra mk5.jpeg'],
+      images: ['img/cars/toyta supra mk5.jpeg'],
       specs: {
         engine: '7000cc',
         horsepower: 1000,
@@ -91,7 +91,7 @@ export class CarService {
       model: 'Dodge Challenger',
       year: 1970,
       price: 60_350_000,
-      images: ['/img/cars/dodge challenger.jpeg'],
+      images: ['img/cars/dodge challenger.jpeg'],
       specs: {
         engine: '2000cc',
         horsepower: 500,
@@ -102,7 +102,7 @@ export class CarService {
       model: 'Mustang gt',
       year: 2019,
       price: 1_350_000,
-      images: ['/img/cars/Mustang GT.jpg'],
+      images: ['img/cars/Mustang GT.jpg'],
       specs: {
         engine: '2600cc',
         horsepower: 250,
@@ -113,7 +113,7 @@ export class CarService {
       model: 'shahin',
       year: 2009,
       price: 1_350,
-      images: ['/img/cars/shahin.jpeg'],
+      images: ['img/cars/shahin.jpeg'],
       specs: {
         engine: '1600cc',
         horsepower: 250,
